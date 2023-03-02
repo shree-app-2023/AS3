@@ -11,7 +11,7 @@
                 "class": "GSLB_Domain",
                 "domainName": "www.feb28.com",
                 "resourceRecordType": "A",
-                "poolLbMode": "round-robin",
+                "poolLbMode": "ratio",
                 "pools": [
                     {
                         "use": "git_feb28"
@@ -21,9 +21,9 @@
             "git_feb28": {
                 "class": "GSLB_Pool",
                 "enabled": false,
-                "lbModeAlternate": "round-robin",
-                "lbModeFallback": "round-robin",
-                "lbModePreferred": "round-robin",
+                "lbModeAlternate": "ratio",
+                "lbModeFallback": "ratio",
+                "lbModePreferred": "ratio",
                 "manualResumeEnabled": true,
                 "verifyMemberEnabled": false,
                 "qosHitRatio": 10,
